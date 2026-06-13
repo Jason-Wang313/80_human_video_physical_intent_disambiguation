@@ -1,8 +1,16 @@
-observed_only_wam nominal success=0.515 tail_risk=0.485
-observed_only_wam hidden_mode_shift success=0.177 tail_risk=0.823
-augmentation_as_data_wam nominal success=0.615 tail_risk=0.385
-augmentation_as_data_wam hidden_mode_shift success=0.245 tail_risk=0.755
-scalar_uncertainty_wam nominal success=0.642 tail_risk=0.358
-scalar_uncertainty_wam hidden_mode_shift success=0.325 tail_risk=0.675
-proposed_branch_mechanism nominal success=0.772 tail_risk=0.228
-proposed_branch_mechanism hidden_mode_shift success=0.578 tail_risk=0.422
+Submission-hardening experiment for paper 80 human_video_physical_intent_disambiguation
+Seven seeds, 600 episodes per seed, strong baselines, ablations, stress sweep, and negative cases.
+observed_only_behavior_clone hidden_mode_shift mean_success=0.4076 ci95=0.0163 tail=0.5924
+observed_only_behavior_clone combined_stress mean_success=0.3086 ci95=0.0149 tail=0.6914
+data_augmentation_wam hidden_mode_shift mean_success=0.4714 ci95=0.0088 tail=0.5286
+data_augmentation_wam combined_stress mean_success=0.4152 ci95=0.0153 tail=0.5848
+scalar_uncertainty_planner hidden_mode_shift mean_success=0.5498 ci95=0.0127 tail=0.4502
+scalar_uncertainty_planner combined_stress mean_success=0.4998 ci95=0.0119 tail=0.5002
+ensemble_disagreement_planner hidden_mode_shift mean_success=0.5969 ci95=0.0140 tail=0.4031
+ensemble_disagreement_planner combined_stress mean_success=0.5431 ci95=0.0131 tail=0.4569
+conformal_risk_filter hidden_mode_shift mean_success=0.6007 ci95=0.0124 tail=0.3993
+conformal_risk_filter combined_stress mean_success=0.5574 ci95=0.0148 tail=0.4426
+proposed_branch_mechanism hidden_mode_shift mean_success=0.6841 ci95=0.0125 tail=0.3159
+proposed_branch_mechanism combined_stress mean_success=0.6505 ci95=0.0056 tail=0.3495
+oracle_branch_upper_bound hidden_mode_shift mean_success=0.7598 ci95=0.0139 tail=0.2402
+oracle_branch_upper_bound combined_stress mean_success=0.7338 ci95=0.0074 tail=0.2662
