@@ -1,6 +1,8 @@
-ablation,combined_stress_mean_success,ci95_success,interpretation
-full_proposed_branch_mechanism,0.6660,0.0134,all components
-minus_branch_atlas,0.5481,0.0120,removes explicit unrealized futures
-minus_tail_risk_objective,0.5695,0.0087,uses mean predicted value only
-minus_diagnostic_probe,0.5986,0.0163,does not actively test ambiguous physical modes
-minus_failure_memory,0.6105,0.0144,does not reuse repaired beliefs
+split,ablation,intent_accuracy,action_success,ci95_success,param_error,abstain_rate,rows
+combined_hard_shift,full_physical_intent_disambiguation,0.79592,0.77891,0.02828,0.17110,0.01020,294
+combined_hard_shift,minus_body_scale_normalization,0.78912,0.76871,0.04286,0.16861,0.02041,294
+combined_hard_shift,minus_handedness_mirroring,0.78571,0.76531,0.03127,0.16854,0.01361,294
+combined_hard_shift,minus_object_affordance,0.66667,0.66327,0.03868,0.29674,0.02041,294
+combined_hard_shift,minus_contact_timing,0.80612,0.77891,0.03006,0.16452,0.01701,294
+combined_hard_shift,minus_style_speed_normalization,0.77551,0.75510,0.02828,0.17213,0.02041,294
+combined_hard_shift,minus_uncertainty_gate,0.79592,0.78231,0.02776,0.17110,0.00000,294

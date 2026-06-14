@@ -13,6 +13,15 @@
 ## v3 - ICLR Main Gate Archive
 - Applied the stricter ICLR-main-conference standard.
 - Re-read local paper, docs, experiments, prior-work artifacts, PDF state, and repo state.
-- Determined that missing real-robot/high-fidelity evidence, template-generated experiments, and unresolved novelty threats are not recoverable from local artifacts.
+- Determined that missing real-robot/high-fidelity evidence, template-generated experiments, and unresolved novelty threats were not recoverable from local artifacts.
 - Recompiled the canonical PDF with `Submission-hardening version: v3`.
 - Terminal decision: KILL_ARCHIVE.
+
+## v4 - Physical Intent Rebuild
+- Added `docs/paper80_rebuild_plan.md` before executing changes.
+- Replaced the scalar probability scaffold with an implemented keypoint-video benchmark for morphology, style, affordance, contact, occlusion, and noise shifts.
+- Implemented raw trajectory kNN, body-normalized kNN, velocity/contact classification, object-affordance classification, style-invariant logistic classification, factored physical-intent disambiguation, and oracle upper bound.
+- Ran seven seeds, 10,290 main rollout rows, 2,058 ablation rollout rows, and 20,160 stress-sweep rows.
+- Produced figures, paired statistics, morphology-leakage probes, ablations, stress sweeps, and negative cases.
+- Terminal decision: STRONG_REVISE.
+

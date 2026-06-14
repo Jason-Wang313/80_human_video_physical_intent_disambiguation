@@ -1,4 +1,17 @@
-case,expected_behavior,observed_success,lesson
-unmodeled_hardware_damage,planner abstains or requests human inspection,0.18,branch semantics cannot repair missing actuation
-semantic_goal_ambiguity,diagnostic physical probes do not solve language ambiguity,0.31,needs a separate instruction-grounding loop
-adversarial_sensor_dropout,tail-risk objective becomes conservative,0.39,sensor-health modeling is out of scope
+split,seed,episode_id,method,true_intent,pred_intent,failure_label,confidence,param_error,lesson
+seen_morphology_clean,0,2,raw_trajectory_knn,rotate,pull,wrong_intent,0.46122,1.76154,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,15,raw_trajectory_knn,lift,handoff,wrong_intent,0.41442,1.02700,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,16,raw_trajectory_knn,place,place,bad_action_parameter,0.64212,0.77940,intent was classified but robot action geometry was not recoverable
+seen_morphology_clean,0,17,raw_trajectory_knn,handoff,handoff,bad_action_parameter,0.42727,0.61216,intent was classified but robot action geometry was not recoverable
+seen_morphology_clean,0,19,raw_trajectory_knn,pull,push,wrong_intent,0.43974,1.99588,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,24,raw_trajectory_knn,push,pull,wrong_intent,0.56337,1.98892,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,25,raw_trajectory_knn,pull,rotate,wrong_intent,0.43093,1.77752,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,30,raw_trajectory_knn,push,rotate,wrong_intent,0.42684,0.62352,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,32,raw_trajectory_knn,rotate,place,wrong_intent,0.56502,0.42680,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,34,raw_trajectory_knn,place,rotate,wrong_intent,0.42348,1.39007,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,35,raw_trajectory_knn,handoff,place,wrong_intent,0.57266,0.32524,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,2,body_normalized_knn,rotate,pull,wrong_intent,0.81073,1.76154,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,8,body_normalized_knn,rotate,push,wrong_intent,0.52362,0.88263,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,12,body_normalized_knn,push,rotate,wrong_intent,0.59935,1.81184,human motion was compatible with the wrong physical intent after style or morphology shift
+seen_morphology_clean,0,14,body_normalized_knn,rotate,rotate,bad_action_parameter,0.81769,1.00643,intent was classified but robot action geometry was not recoverable
+seen_morphology_clean,0,28,body_normalized_knn,place,place,bad_action_parameter,1.00000,0.89186,intent was classified but robot action geometry was not recoverable
