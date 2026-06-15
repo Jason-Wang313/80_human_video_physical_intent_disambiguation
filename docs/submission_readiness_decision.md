@@ -12,3 +12,12 @@ Honest terminal action: keep as `STRONG_REVISE`; do not submit to ICLR main with
 
 Revival condition: validate the factored representation on real human-video-to-robot data or a recognized simulator suite, add learned visual encoders and external baselines, then rewrite as a full empirical submission.
 
+## 2026-06-15 Continuation Decision
+
+Decision: STRONG_REVISE.
+
+ICLR main-conference readiness: NO.
+
+Reason: the full deterministic benchmark was rerun and the positive local evidence reproduces. On `combined_hard_shift`, `physical_intent_disambiguation` reaches 0.77891 +/- 0.02828 action success versus 0.60544 +/- 0.04303 for `object_affordance_classifier`, with paired gain 0.17347 +/- 0.02211 and 7/7 better seeds. Morphology leakage falls from 0.78231 for raw trajectories to 0.57823 for the factored method, and maximum combined stress remains favorable at 0.71429 versus 0.51786 for object-affordance classification.
+
+Blocker: the evidence is still generated local keypoint-video data with no real human-video demonstrations, robot hardware validation, recognized high-fidelity benchmark, or external learned video-to-robot baseline. This blocks ICLR-main readiness even though the local mechanism is promising.

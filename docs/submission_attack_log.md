@@ -192,3 +192,10 @@ Attack: No meaningful recoverable ICLR-main issue remains after archiving.
 Verdict: Terminal condition reached.
 
 Action: Mark KILL_ARCHIVE and stop.
+
+## 2026-06-15 Continuation Gate
+Attack: The v4 STRONG_REVISE decision may be stale unless the full local benchmark, CSVs, PDF, and public artifact state are rechecked.
+
+Verdict: Rechecked. STRONG_REVISE remains the correct terminal state.
+
+Action: Keep STRONG_REVISE, not ICLR-main-ready. The full benchmark rerun regenerated 10,290 main rollouts, 2,058 ablation rollouts, and 20,160 stress rollouts. `physical_intent_disambiguation` beats `object_affordance_classifier` on `combined_hard_shift` action success, 0.77891 +/- 0.02828 versus 0.60544 +/- 0.04303, with paired gain 0.17347 +/- 0.02211 and 7/7 better seeds. The decision cannot be upgraded because the evidence is generated local keypoint-video data rather than real human-video, robot hardware, or a recognized high-fidelity benchmark.

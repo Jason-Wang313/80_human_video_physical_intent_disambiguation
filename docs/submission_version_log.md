@@ -25,3 +25,11 @@
 - Produced figures, paired statistics, morphology-leakage probes, ablations, stress sweeps, and negative cases.
 - Terminal decision: STRONG_REVISE.
 
+## v4 Continuation Audit - 2026-06-15
+
+- Added `docs/paper80_iclr_submission_execution_plan_20260615.md` before rerunning the evidence gate.
+- Recompiled and reran the full deterministic benchmark without reducing seeds, baselines, ablations, or stress sweeps.
+- Rechecked CSV integrity, seed/method/split/ablation/stress coverage, paired statistics, morphology leakage, ablations, stress behavior, PDF logs, Downloads-only placement, Desktop exclusion, and public GitHub status.
+- Cleaned BibTeX placeholder entries by adding explicit authors and changed fragile `[h]` floats to `[tbp]` before rebuilding the PDF.
+- Verified `C:/Users/wangz/Downloads/80.pdf` SHA256 `C3BA4F78792B565CEC2DC80658E3AF551D0F792EABF66F0C0783039A2684B0DC`.
+- Terminal decision remains: STRONG_REVISE.

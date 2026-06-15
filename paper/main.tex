@@ -48,7 +48,7 @@ The implemented methods are:
 \section{Main Results}
 Table~\ref{tab:combined} shows the decisive combined hard-shift result. The proposed method beats all non-oracle baselines on robot action success, intent accuracy, calibration, and parameter error. The oracle remains far above all learned or engineered methods, which is an important ceiling gap.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -71,7 +71,7 @@ Method & Action success & Intent acc. & Param. error & Calib. error \\
 
 The paired action-success gain over \texttt{object\_affordance\_classifier} is $0.173 \pm 0.022$ across seeds. The gain over \texttt{style\_invariant\_logistic} is $0.293 \pm 0.065$.
 
-\begin{figure}[h]
+\begin{figure}[tbp]
 \centering
 \includegraphics[width=0.95\linewidth]{../figures/intent_success_combined.png}
 \caption{Combined hard-shift action success. The factored physical-intent model beats the strongest non-oracle baseline.}
@@ -80,7 +80,7 @@ The paired action-success gain over \texttt{object\_affordance\_classifier} is $
 \section{Morphology Leakage}
 We measure morphology leakage by training a probe to recover body-scale group from the representation. Raw video features leak morphology strongly at $0.782$ probe accuracy. The proposed factored representation reduces leakage to $0.578$, while retaining higher robot action success than morphology-blind object-only features.
 
-\begin{figure}[h]
+\begin{figure}[tbp]
 \centering
 \includegraphics[width=0.95\linewidth]{../figures/morphology_leakage.png}
 \caption{Morphology leakage probe accuracy on \texttt{combined\_hard\_shift}. Lower is better; dashed line indicates chance.}
@@ -89,7 +89,7 @@ We measure morphology leakage by training a probe to recover body-scale group fr
 \section{Ablations}
 Table~\ref{tab:ablations} shows ablations on \texttt{combined\_hard\_shift}. Removing object-affordance evidence causes the largest drop, from $0.779$ to $0.663$ action success. Removing style-speed normalization is smaller but negative. Body-scale and handedness ablations are modest, which weakens any claim that every morphology term is independently necessary. Contact timing and uncertainty gating are nearly neutral in this local benchmark.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -110,7 +110,7 @@ Minus uncertainty gate & $0.782 \pm 0.028$ & $0.796$ & $0.171$ \\
 \label{tab:ablations}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[tbp]
 \centering
 \includegraphics[width=0.95\linewidth]{../figures/intent_ablation.png}
 \caption{Ablations on the combined hard split. Neutral ablations are reported rather than hidden.}
@@ -119,7 +119,7 @@ Minus uncertainty gate & $0.782 \pm 0.028$ & $0.796$ & $0.171$ \\
 \section{Stress Tests}
 Stress sweeps independently vary morphology gap, style exaggeration, affordance ambiguity, and their combination. At maximum combined stress, the proposed method reaches $0.714 \pm 0.045$ action success, compared with $0.518 \pm 0.081$ for object-affordance classification and $0.476 \pm 0.059$ for style-invariant logistic regression.
 
-\begin{figure}[h]
+\begin{figure}[tbp]
 \centering
 \includegraphics[width=0.95\linewidth]{../figures/intent_stress_sweep.png}
 \caption{Combined morphology/style/affordance stress sweep.}
